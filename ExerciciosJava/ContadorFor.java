@@ -1,4 +1,4 @@
-package CursoGuranabara;
+package ExerciciosJava;
 //contador em java
 
 import java.util.*;
