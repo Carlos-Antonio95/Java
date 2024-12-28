@@ -3,9 +3,10 @@ package ExerciciosJava.SimuladorPorta;
 public class Porta {
    private boolean estado;
    private String nome;
-
-   public Porta(){
+     //contrutor
+   public Porta(String nome){
     this.estado = false; //inicializa a porta como fechada
+    this.nome = nome;
    }
 
    public void abrir(){

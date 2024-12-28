@@ -3,7 +3,7 @@ package ExerciciosJava;
 import java.util.Scanner;
 
 public class ExercicioMetodos {
-     static int n1;
+    static int n1;
     static int n2;
     static int resultado;
     static int contador = 0;
