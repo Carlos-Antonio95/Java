@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SisCadProduto {
         static Produto produto1 = new Produto("Celular", 1500.0,10);
-        static Produto produto2 = new Produto("Televisão",2200.34,10);
+        static Produto produto2 = new Produto("Televis?o",2200.34,10);
         static Produto produto3 = new Produto("Caneta", 2.50,10);
         
     public static void main(String[] agrs){
