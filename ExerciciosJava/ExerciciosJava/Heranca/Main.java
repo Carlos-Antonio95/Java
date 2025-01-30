@@ -159,7 +159,21 @@ public class Main {
                     }
 
                     break;
+
+                case 6:
+                    System.out.println("Informações das contas: ");
+                  // ContaBancaria contaSelecionada;
+                    for(int i = 0; i < contas.size(); i++){
+                       ContaBancaria contaSelecionada = contas.get(i);
+                       contaSelecionada.exibirInfo();   
+                    }
+
+                    break;
+                case 0:
+                    System.out.println("Obrigado por usar nosso programa!");
+                    break;
                 default:
+                    System.out.println("Opção inválida!");
                     break;
             }
         }while(op1 != 0);

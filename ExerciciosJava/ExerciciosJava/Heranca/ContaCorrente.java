@@ -43,7 +43,8 @@ public class ContaCorrente extends ContaBancaria{
             this.setSaldo(this.getSaldo() - valor);
             System.out.println("Saque de R$ " + valor + " realizado com sucesso. Saldo atual: R$ " + this.getSaldo());
         } else {
-            System.out.println("Erro: Saldo insuficiente ou valor inválido para saque.");
+            throw new IllegalArgumentException("Erro: Saldo insuficiente ou valor inválido para saque.");
+
         }
     }
 
