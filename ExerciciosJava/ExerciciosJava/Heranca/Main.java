@@ -1,4 +1,4 @@
-
+package ExerciciosJava.Heranca;
 import java.util.*;
 public class Main {
     public static void main(String[] args){
@@ -88,13 +88,12 @@ public class Main {
                     for(int i = 0; i < contas.size(); i ++){
                         ContaBancaria conta = contas.get(i);
                         System.out.printf("Conta # %d : Titular: %s\n",i,conta.getTitular());
-                        System.out.println(conta.getSaldo());
                     }
                     System.out.println("Escolha a conta para depositar (digite o número da conta)");
                     int contaEscolhida = scanner.nextInt();
                     scanner.nextLine();
 
-                    if (contaEscolhida >= 0 && contaEscolhida <= contas.size()) {
+                    if (contaEscolhida >= 0 && contaEscolhida < contas.size()) {
                         ContaBancaria contaSelecionada = contas.get(contaEscolhida);
 
                         System.out.println("Digite o valor para deposito: ");
@@ -124,7 +123,7 @@ public class Main {
                     contaEscolhida = scanner.nextInt();
                     scanner.nextLine();
 
-                    if (contaEscolhida >= 0 && contaEscolhida <= contas.size()) {
+                    if (contaEscolhida >= 0 && contaEscolhida < contas.size()) {
                         ContaBancaria contaSelecionada = contas.get(contaEscolhida);
                         System.out.println("Digite o valor para saque: ");
                         float valorSaque = scanner.nextFloat();
@@ -135,8 +134,30 @@ public class Main {
                             System.out.println("Erro no saque: "+e.getMessage());
                         }
                     }else{
-                        System.out.println("Conta inválida tevente novamente");
+                        System.out.println("Conta inválida tente novamente");
                     }
+                    break;
+
+                case 5:
+                    System.out.println("Contas disponiveis");
+                    for(int i = 0; i < contas.size(); i++){
+                        ContaBancaria conta = contas.get(i);
+                        System.out.printf("Conta # %d : Titular: %s\n",i,conta.getTitular());
+                    }
+                    System.out.println("Escolha a conta para aplicar redimento(digite o número da conta)");
+                    contaEscolhida = scanner.nextInt();
+                    scanner.nextLine();
+                    if (contaEscolhida >= 0 && contaEscolhida < contas.size()) {
+                        ContaBancaria contaSelecionada = contas.get(contaEscolhida);
+                        if (contaSelecionada instanceof ContaPoupanca) {
+                            ((ContaPoupanca) contaSelecionada).aplicarRendimento();
+                        } else {
+                            System.out.println("Erro: Somente contas poupança podem receber rendimento!");
+                        }
+                    } else {
+                        System.out.println("Conta inválida, tente novamente.");
+                    }
+
                     break;
                 default:
                     break;

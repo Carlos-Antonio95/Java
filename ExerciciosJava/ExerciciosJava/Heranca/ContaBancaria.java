@@ -1,3 +1,4 @@
+package ExerciciosJava.Heranca;
 public abstract class ContaBancaria {
     //Atributos
     private String titular;
@@ -44,7 +45,7 @@ public abstract class ContaBancaria {
             this.setSaldo(this.getSaldo() - valor);
             System.out.println("Saque de R$ " + valor + " realizado com sucesso. Saldo atual: R$ " + this.getSaldo());
         } else {
-            throw new IllegalArgumentException("Erro: Saldo insuficiente ou valor inválido para saque.");
+            throw new IllegalArgumentException("Erro: Saldo insuficiente ou valor invï¿½lido para saque.");
         }
     }
 
