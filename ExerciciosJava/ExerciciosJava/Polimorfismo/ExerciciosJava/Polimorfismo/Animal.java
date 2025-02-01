@@ -39,8 +39,13 @@ public abstract class Animal {
     }
 
     //Métodos abstratos
-    public abstract void locomover();
-    public abstract void alimentar();
+    public void locomover(){
+        System.out.println("Correndo");
+
+    }
+    public void alimentar(){
+        
+    }
     public abstract void emitorSom();
 
     
