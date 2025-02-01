@@ -5,11 +5,12 @@ public class ContaPoupanca extends ContaBancaria {
     //Atributos
     private float rendimento;
 
+    //Contrutor
     public ContaPoupanca(String titular, int numeroConta, float saldo, float rendimento) {
-        super(titular, numeroConta, saldo);
+        super(titular, numeroConta, saldo);//chama o construtor contaBancaria
         this.setRendimento(rendimento);
     }
-
+    //Métodos setters e getters
     public float getRendimento() {
         return rendimento;
     }
@@ -30,6 +31,7 @@ public class ContaPoupanca extends ContaBancaria {
 
     }
 
+    //Método exibir infirmações da conta poucança
     @Override
     public void exibirInfo(){
         System.out.println("Informações da conta:");

@@ -17,7 +17,7 @@ public class Main {
             System.out.print("Sua opção: ");
             op1 = scanner.nextInt();
             switch (op1) {
-                case 1:
+                case 1://Criar conta Corrente
                     System.out.println("Quantas contas corrente deseja criar ?");
                     quantCc = scanner.nextInt();
                     scanner.nextLine();
@@ -50,7 +50,7 @@ public class Main {
 
                     }
                     break;
-                case 2:
+                case 2://Criar conta poupança
                     System.out.println("Quantas contas pouponças deseja criar? ");
                     quantCp = scanner.nextInt();
                     scanner.nextLine();// limpa o buffer
@@ -83,7 +83,7 @@ public class Main {
                     }
                     break;
             
-                case 3:
+                case 3://Depositar valor na conta 
                     System.out.println("Contas disponiveis:");
                     for(int i = 0; i < contas.size(); i ++){
                         ContaBancaria conta = contas.get(i);
@@ -112,7 +112,7 @@ public class Main {
 
                     break;
 
-                case 4:
+                case 4://Sacar dinheiro da conta
                     System.out.println("Contas disponíveis: ");
                     for(int i = 0; i < contas.size(); i ++){
                         ContaBancaria conta = contas.get(i);
@@ -138,7 +138,7 @@ public class Main {
                     }
                     break;
 
-                case 5:
+                case 5://Aplicar redimento na conta poupança
                     System.out.println("Contas disponiveis");
                     for(int i = 0; i < contas.size(); i++){
                         ContaBancaria conta = contas.get(i);
@@ -149,7 +149,7 @@ public class Main {
                     scanner.nextLine();
                     if (contaEscolhida >= 0 && contaEscolhida < contas.size()) {
                         ContaBancaria contaSelecionada = contas.get(contaEscolhida);
-                        if (contaSelecionada instanceof ContaPoupanca) {
+                        if (contaSelecionada instanceof ContaPoupanca) {//se contaSelecionada for uma instancia de conta poupança converte contaSelecionada para tipo conta poupança e aplica o redimento
                             ((ContaPoupanca) contaSelecionada).aplicarRendimento();
                         } else {
                             System.out.println("Erro: Somente contas poupança podem receber rendimento!");
@@ -160,9 +160,8 @@ public class Main {
 
                     break;
 
-                case 6:
+                case 6://Exibe informações da conta
                     System.out.println("Informações das contas: ");
-                  // ContaBancaria contaSelecionada;
                     for(int i = 0; i < contas.size(); i++){
                        ContaBancaria contaSelecionada = contas.get(i);
                        contaSelecionada.exibirInfo();   
@@ -179,7 +178,7 @@ public class Main {
         }while(op1 != 0);
 
 
-        scanner.close();
+        scanner.close();//fecha o scanner
     }
 
 }
