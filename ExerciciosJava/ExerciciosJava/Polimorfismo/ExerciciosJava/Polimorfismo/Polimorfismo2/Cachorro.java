@@ -1,6 +1,7 @@
 package ExerciciosJava.Polimorfismo.Polimorfismo2;
 
 public class Cachorro extends Lobo {
+    //Métodos
 
     @Override
     public void emitirSom(){
