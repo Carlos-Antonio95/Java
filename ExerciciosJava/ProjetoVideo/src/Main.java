@@ -11,10 +11,16 @@ public class Main {
 
         Visualizacao vis[] = new Visualizacao[3];
         vis[0] = new Visualizacao(g[0], v[0]);
-        vis[0] = new Visualizacao(g[0], v[1]);
-        vis[0] = new Visualizacao(g[1], v[2]);
-        vis[0] = new Visualizacao(g[1], v[0]);
+        vis[0].avaliar();
+        System.out.println(vis[0].toString());
+
+
+        vis[1] = new Visualizacao(g[0], v[1]);
+        vis[1].avaliar(35.0f);
+        System.out.println(v[0].toString());
+        vis[2] = new Visualizacao(g[1], v[2]);
+        vis[2] = new Visualizacao(g[1], v[0]);
        
-        
+
     }
 }
