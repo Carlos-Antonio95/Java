@@ -18,26 +18,17 @@ public class Video implements AcoesVideo {
     //Métodos espciais
     @Override
     public void play() {
-        if (getReproduzindo() == false) {
-            System.out.println("Vidío em play");
-            setReproduzindo(true);
-        }else{
-            System.out.println("Ja esta reproduzindo");
-        }
+        this.reproduzindo = true;
         
     }
     @Override
     public void pause() {
-        if (getReproduzindo()) {
-            System.out.println("Vídio pausado");
-            setReproduzindo(false);
-        }else{
-            System.out.println("Video ja pausado");
-        }
+        this.reproduzindo = false;
         
     }
     @Override
     public void like() {
+        this.setCurtidas(getCurtidas() + 1);
         
     }
 

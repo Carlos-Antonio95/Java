@@ -11,6 +11,7 @@ public class Gafanhoto extends Pessoa {
         this.totAssistindo = 0;
     }
 
+    //Métodos getters e setters
     public String getLogin() {
         return login;
     }
@@ -31,6 +32,7 @@ public class Gafanhoto extends Pessoa {
 
     }
 
+    //Método toString sobreescrito
     @Override
     public String toString() {
         return "Gafanhoto "+super.toString()+"\n[login=" + login + ", \ntotAssistindo=" + totAssistindo + "]";
