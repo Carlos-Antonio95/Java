@@ -76,7 +76,8 @@ public class Main {
                             ContaBancaria novaContaCp = new ContaPoupanca(nomeCp, numeroCp, saldoCp, redimentoCp); 
                             contas.add(novaContaCp);
                             
-                        } catch (IllegalArgumentException e) {
+                            
+                        } catch (InputMismatchException e) {
                             System.out.println("Erro ao criar conta. "+ e.getMessage());
                            i--;
                         }
@@ -165,6 +166,7 @@ public class Main {
                     for(int i = 0; i < contas.size(); i++){
                        ContaBancaria contaSelecionada = contas.get(i);
                        contaSelecionada.exibirInfo();   
+                       System.out.println();
                     }
 
                     break;

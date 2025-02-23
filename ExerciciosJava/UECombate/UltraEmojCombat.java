@@ -4,6 +4,8 @@ public class UltraEmojCombat {
     public static void main(String[] agrs) {
         // Criação de um array para armazenar os lutadores (6 posições)
         Lutador l[] = new Lutador[6];
+        Lutador novo = new Lutador("Pretty Boy", "França", 31, 1.75f, 68.9f, 11, 2, 1);
+        Lutador novo1 = new Lutador(null, null, 0, 0, 0, 0, 0, 0);
         
         // Instanciação de cada lutador com os respectivos atributos
         l[0] = new Lutador("Pretty Boy", "França", 31, 1.75f, 68.9f, 11, 2, 1); // Lutador 1
