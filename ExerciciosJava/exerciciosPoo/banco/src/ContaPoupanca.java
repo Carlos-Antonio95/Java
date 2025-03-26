@@ -16,7 +16,10 @@ public class ContaPoupanca extends ContaBancaria {
         this.taxaRendimento = taxaRendimento;
     }
 
-    
+    //Método para render a % de juros ao valor do saldo
+    public void renderJuros(){
+        this.saldo = this.saldo + (this.saldo * taxaRendimento / 100);
+    }
     
 
 }
